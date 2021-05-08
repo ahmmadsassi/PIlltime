@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437175632209",
+    "project_id": "pills-time-89d7f",
+    "storage_bucket": "pills-time-89d7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437175632209:android:c056bbdfd4c3e130359370",
+        "android_client_info": {
+          "package_name": "com.example.pillstime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437175632209-gj19uh74638mnprqupsi33k7ctiha26g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPqb_fWS8T7zgav5J581J8t5mNMFlS0OU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437175632209-gj19uh74638mnprqupsi33k7ctiha26g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
