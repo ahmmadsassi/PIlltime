@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide();
         final ProgressBar pb_default = (ProgressBar) findViewById(R.id.progressBar);
-       pb_default.getProgressDrawable().setColorFilter(Color.parseColor("#000000"), PorterDuff.Mode.SRC_IN);
+       pb_default.getProgressDrawable().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
         final Handler handler = new Handler();
         new Thread(new Runnable() {
             @Override

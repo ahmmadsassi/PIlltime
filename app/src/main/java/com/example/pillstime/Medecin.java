@@ -9,16 +9,32 @@ public class Medecin {
     private int pills ;
     private String from ;
     private String to ;
+    private String Firsttime;
+    private String secondtime;
+    private String thereadtime;
 
-
-    private ArrayList<String> times = new ArrayList<>();
-
-    public ArrayList<String> getTimes() {
-        return times;
+    public String getFirsttime() {
+        return Firsttime;
     }
 
-    public void setTimes(ArrayList<String> times) {
-        this.times = times;
+    public void setFirsttime(String firsttime) {
+        Firsttime = firsttime;
+    }
+
+    public String getSecondtime() {
+        return secondtime;
+    }
+
+    public void setSecondtime(String secondtime) {
+        this.secondtime = secondtime;
+    }
+
+    public String getThereadtime() {
+        return thereadtime;
+    }
+
+    public void setThereadtime(String thereadtime) {
+        this.thereadtime = thereadtime;
     }
 
     public String getFrom() {
@@ -69,4 +85,6 @@ public class Medecin {
         this.pills = pills;
     }
 
+    public void setTimes(ArrayList<String> times) {
+    }
 }

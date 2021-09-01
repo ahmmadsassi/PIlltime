@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -51,7 +52,6 @@ public class Scanner extends AppCompatActivity {
     private ExecutorService cameraExecutor;
     private PreviewView previewView;
     private MyImageAnalyzer analyzer;
-    DatabaseReference mPostReference;
     String times ;
     String how ;
     String from ;
@@ -59,13 +59,15 @@ public class Scanner extends AppCompatActivity {
     String Number ;
     String phonenumber ;
     String name ;
+    Medecin medecine;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
-        mPostReference = FirebaseDatabase.getInstance().getReference("Medecins");
+        getSupportActionBar().hide();
+
         previewView = findViewById(R.id.previewview);
 
         this.getWindow().setFlags(1024,1024);
@@ -203,40 +205,14 @@ analyzer = new MyImageAnalyzer(getSupportFragmentManager());
                     int type = barcode.getWifi().getEncryptionType();
                     break;
                 case Barcode.TYPE_TEXT:
-                    if(!bd.isAdded()){
-                        bd.show(fragmentManager,"");
-                    }
-                    bd.fetchurl11(name,Number,times);
+
                     String id = barcode.getDisplayValue();
-                    mPostReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    System.out.println(id);
 
-                            Medecin notif = new Medecin();
-                            notif = snapshot.child(id).getValue(Medecin.class);
-                             String name = String.valueOf(notif.getName());
-                               String times = String.valueOf(notif.getTimes());
-                                String how = String.valueOf(notif.getHow());
-                                String from = String.valueOf(notif.getFrom());
-                                String  to = String.valueOf(notif.getTo());
-                                String Number = String.valueOf(notif.getPills());
-                                String phonenumber =  String.valueOf(notif.getPhone_number());
-
-
-
-
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                            Toast.makeText(Scanner.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-
-
+                    Intent i = new Intent(Scanner.this,ConfirmeMedecineDetails.class);
+                    i.putExtra("valeurdid",id);
+                    startActivity(i);
+  
 
 
                     break;

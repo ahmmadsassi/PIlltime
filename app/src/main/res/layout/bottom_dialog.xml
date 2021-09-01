@@ -17,19 +17,21 @@
             android:id="@+id/close"
             android:layout_alignParentLeft="true"
             android:background="@drawable/close"
-            ></ImageView>
+            >
+
+        </ImageView>
 
 
         <TextView
             android:id="@+id/text_title"
-            android:layout_width="98dp"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="129dp"
+            android:fontFamily="@font/googlesans_bold"
             android:gravity="center_horizontal"
-            android:text="title"
+            android:text="ALARME"
             android:textColor="@color/black"
-            android:textSize="15dp"
- />
+            android:textSize="40dp" />
 
     </RelativeLayout>
     <TextView
@@ -40,7 +42,6 @@
         android:layout_marginLeft="165dp"
         android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
-        android:text="pills number"
         android:textSize="20dp"
         android:textAlignment="center">
 
@@ -53,13 +54,12 @@
         android:layout_marginLeft="165dp"
         android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
-        android:text="times"
         android:textSize="20dp"
         android:textAlignment="center">
 
     </TextView>
 
-    <TextView
+    <Button
         android:id="@+id/visit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,7 +69,9 @@
         android:paddingLeft="12dp"
         android:paddingBottom="4dp"
         android:text="Set alarme"
+android:fontFamily="@font/googlesans_medium"
 
+        >
 
-        ></TextView>
+    </Button>
 </LinearLayout>

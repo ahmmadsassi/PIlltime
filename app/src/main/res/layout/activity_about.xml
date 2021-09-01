@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ne2"
+    tools:context=".About">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+               <TextView
+            android:id="@+id/text_title"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="109dp"
+            android:fontFamily="@font/googlesans_bold"
+            android:gravity="center_horizontal"
+            android:text="About US"
+            android:textColor="@color/black"
+            android:textSize="40dp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_border_raduis"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Est une application médical spécialisée dans l'organisation de séjours médicaux en Tunisie. Nous sommes leaders dans l'élaboration de packages all inclusive organisés autour des interventions de chirurgie esthétique, de médecine morphologique, de chirurgie de l'obésité, de chirurgie générale et de fécondation in vitro."
+            android:fontFamily="@font/googlesans_bold"
+            android:layout_marginTop="10dp"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+            </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/googlesans_bold"
+            android:layout_marginBottom="5dp"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:text="Vous pouvez sécuriser votre choix de SantePro en confirmant notre adresse et nos coordonnées sur notre page mentions légales. Les services médicaux représentent 4% des exportations tunisiennes. Cela montre à la fois l'essor et le succés d'un secteur qui s'appuie sur plus de 120 cliniques privées. Mais quantité ne vaut pas qualité. Pour répondre aux exigences d'une patientèle de plus en plus soucieuse de qualité, l'agence SantéPro a développé une infrastructure de prise en charge fondée sur un principe de management qualité fort :">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/googlesans_bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:text=" * Dire ce que l'on fait.
+
+
+
+
+
+
+
+
+
+
+                                                       * Vérifier si ce qu'on a fait correspond à ce qui a été dit.">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/googlesans_bold"
+            android:textSize="13dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:text="Toutes nos équipes sont formées à ce principe. Des conseillères qui soumettent vos demandes de devis aux chirurgiens qui vont vous opérer quand vous serez sur place. Pour respecter ce principe recommandé par les offices qualité, SantéPro vous adresse un devis complet qui détaille le tarif proposé et les étapes de votre prise en charge en Tunisie. Une fois sur place, nous validons avec vous le bon déroulement de chacune des étapes et des services indiqués. C'est notre engagement de satisfaction.
+Pendant le séjour, un assistant s'occupe de vous à votre arrivée, à la clinique et à l'hotel.">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

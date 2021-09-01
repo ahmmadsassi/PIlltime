@@ -28,6 +28,7 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        getSupportActionBar().hide();
 
 
         name = (EditText) findViewById(R.id.name);
@@ -38,10 +39,10 @@ public class Signup extends AppCompatActivity {
         fau = FirebaseAuth.getInstance();
 
 
-        if(fau.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(),Signin.class));
-            finish();
-        }
+      //  if(fau.getCurrentUser()!=null){
+        //    startActivity(new Intent(getApplicationContext(),.class));
+         //   finish();
+       // }
 
 
 signup.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +76,7 @@ signup.setOnClickListener(new View.OnClickListener() {
                 if(task.isSuccessful()){
 
                     Toast.makeText(Signup.this,"User created ",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Signup.this,Dashbord.class));
+                    startActivity(new Intent(Signup.this,Signin.class));
 
                 }else {
 

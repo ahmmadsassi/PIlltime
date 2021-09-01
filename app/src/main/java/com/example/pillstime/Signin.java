@@ -26,6 +26,7 @@ public class Signin extends AppCompatActivity {
     private EditText mpassword ;
     private TextView singin ;
     private TextView singup;
+
     FirebaseAuth fau;
 
     @Override
@@ -35,7 +36,7 @@ public class Signin extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         getWindow().setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_login);
-
+        getSupportActionBar().hide();
 
         memail = (EditText) findViewById(R.id.email);
         mpassword= (EditText) findViewById(R.id.password);
@@ -43,7 +44,13 @@ public class Signin extends AppCompatActivity {
         singup =(TextView) findViewById(R.id.signip);
         fau = FirebaseAuth.getInstance();
 
+        singup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signup( v);
 
+            }
+        });
 
         singin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,15 +91,12 @@ public class Signin extends AppCompatActivity {
                 });
             }
         });
-        singup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Signin.this,Signup.class));
-            }
-        });
+
     }
 
 
-
-
+    public void signup(View view) {
+        Intent i = new Intent(Signin.this,Signup.class);
+        startActivity(i);
+    }
 }

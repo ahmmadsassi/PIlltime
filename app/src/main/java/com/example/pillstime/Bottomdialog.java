@@ -39,14 +39,15 @@ public String name,time,numberp;
         close = view.findViewById(R.id.close);
 
         namemedecin.setText(name);
-        pillsnumber.setText(numberp);
-        times.setText(time);
+        System.out.println(name);
+   //     pillsnumber.setText(numberp);
+     //   times.setText(time);
 
        setalarme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
-                i.putExtra(AlarmClock.EXTRA_MESSAGE, time);
+                i.putExtra(AlarmClock.EXTRA_MESSAGE, "hello");
                 startActivity(i);
             }
         });
@@ -62,6 +63,16 @@ public String name,time,numberp;
         return view;
     }
 
+
+    public void getdetails(String namefromscanner ){
+
+         name = namefromscanner ;
+
+
+
+
+    }
+/*
        public void fetchurl11(String namesca,String numberpillssca , String timesca){
             ExecutorService executorService = Executors.newSingleThreadExecutor();
             Handler handler = new Handler(Looper.getMainLooper());
@@ -77,5 +88,7 @@ public String name,time,numberp;
             });
 
         }
+
+ */
     }
 

@@ -1,9 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
     tools:context=".medecine_success">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:fontFamily="@font/googlesans_bold"
+                style="@style/actionBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Medicine Successfully Saved" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal">
+
+            <ImageView
+                android:layout_width="152dp"
+                android:layout_height="152dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_success" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="51dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_weight="0.5"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/textViewMedicineName"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:gravity="end"
+                    tools:text="Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_weight="0.5"
+                    android:text="Description" />
+
+                <TextView
+                    android:id="@+id/textViewMedicineDescription"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    tools:text="Description" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_weight="0.5"
+                    android:text="First time" />
+
+                <TextView
+                    android:id="@+id/fst"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    tools:text="--:--" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight="0.5"
+                    android:text="Secondtime" />
+
+                <TextView
+                    android:id="@+id/st"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:gravity="end"
+                    tools:text="--:--" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_weight="0.5"
+                    android:text="therea time" />
+
+                <TextView
+                    android:id="@+id/thtime"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:gravity="end"
+                    tools:text="--:--" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:layout_weight="0.5"
+                    android:text="Start Date" />
+
+                <TextView
+                    android:id="@+id/textViewMedicineStartDate"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:gravity="end"
+                    tools:text="Start Date" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <TextView
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:text="End Date" />
+
+                <TextView
+                    android:id="@+id/textViewMedicineEndDate"
+                    style="@style/successDataDetailsRows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/googlesans_medium"
+                    android:gravity="end"
+                    tools:text="End Date" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_normal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonAddMedicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_weight=".5"
+            android:background="@drawable/save_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/googlesans_medium"
+            android:text="@string/add_medicine"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonHomePage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@drawable/edit_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/googlesans_medium"
+            android:text="List"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

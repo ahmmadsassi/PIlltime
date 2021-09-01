@@ -50,6 +50,7 @@ public class Addmedecin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addmedecin);
+        getSupportActionBar().hide();
         save = (Button) findViewById(R.id.save);
         this.name = (EditText) findViewById(R.id.nameofdrag);
         how = (EditText) findViewById(R.id.how);

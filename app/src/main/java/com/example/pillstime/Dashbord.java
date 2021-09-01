@@ -14,6 +14,7 @@ public class Dashbord extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_dashbord);
         scanbtn = (TextView) findViewById(R.id.Scanbtn);
         aboutbtn = (TextView) findViewById(R.id.aboutbtn);
@@ -27,16 +28,26 @@ public class Dashbord extends AppCompatActivity {
                 startActivity(new Intent(Dashbord.this,Scanner.class));
             }
         });
-addmedecinbtn.setOnClickListener(new View.OnClickListener() {
+        addmedecinbtn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         startActivity(new Intent(Dashbord.this,Addmedecin.class));
     }
 });
 
+        listbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dashbord.this,MedecineListe.class));
+            }
+        });
 
-
-
+        aboutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dashbord.this,About.class));
+            }
+        });
 
 
 
